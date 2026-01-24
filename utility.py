@@ -434,7 +434,7 @@ def histo_kde(increments:np.ndarray, h_ax, bin_edges, scale, xlabel="Standardize
     sns.kdeplot(increments, color=line_color, linewidth=2, label="KDE-estimated PDF", ax=h_ax)
     h_ax.legend()
     h_ax.set_title(f"Increments (PDF) at s={scale}")
-    plt.savefig('./point4_histo.png', dpi=300, bbox_inches='tight')
+    #plt.savefig('./point4_histo.png', dpi=300, bbox_inches='tight')
 
 def gaussian_vs_cast_fit(increments:np.ndarray, g_ax, bin_edges, lambda2, scale, scatter_color='lightblue', scatter_marker='o', line_color='r'):
     # increments should be already standardized here
@@ -455,7 +455,7 @@ def gaussian_vs_cast_fit(increments:np.ndarray, g_ax, bin_edges, lambda2, scale,
     g_ax.legend()
     g_ax.grid(True, alpha=0.3)
     g_ax.set_title(f"Gaussian vs. Castaing fit of increments at s={scale}")
-    plt.savefig('./point4_gauss_vs_cast_fit.png', dpi=300, bbox_inches='tight')
+    #plt.savefig('./point4_gauss_vs_cast_fit.png', dpi=300, bbox_inches='tight')
     print(f"Gaussian vs Castaing fit (mean {mu:.4f}, standard deviation {sigma:.4f})")
     return mu, sigma
 
@@ -494,5 +494,5 @@ def ks_tests(increments, lambda2, cdf_ax, scale):
     cdf_ax.legend()
     cdf_ax.grid(True, alpha=0.3)
     plt.tight_layout()
-    plt.savefig('./point4_cdf_comparison.png', dpi=300, bbox_inches='tight')
+    #plt.savefig('./point4_cdf_comparison.png', dpi=300, bbox_inches='tight')
     plt.show()
