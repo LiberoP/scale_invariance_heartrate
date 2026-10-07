@@ -30,23 +30,23 @@ A short theoretical background on my (Libero Pollini) contribution to the work:
 **Gaussian fit**
 
 $$
-\mathcal{N}(x;\mu,\sigma) = \frac{1}{\sqrt{2\pi\sigma^{2}}}\,
-\exp\!\left(-\frac{(x-\mu)^{2}}{2\sigma^{2}}\right)
+\mathcal{N}(x;\mu,\sigma) = \frac{1}{\sqrt{2\pi\sigma^{2}}}
+\exp\left(-\frac{(x-\mu)^{2}}{2\sigma^{2}}\right)
 $$
 
 **Castaing's PDF** (a log-normal mixture of Gaussians)
 
 $$
 \tilde{P}_{s}(x) = \int_{0}^{\infty}
-P_{L}\!\left(\frac{x}{\sigma}\right)\frac{1}{\sigma}\,
-G_{s,L}(\ln\sigma)\,d(\ln\sigma)
+P_{L}\left(\frac{x}{\sigma}\right)\frac{1}{\sigma}
+G_{s,L}(\ln\sigma)d(\ln\sigma)
 $$
 
 with the log-normal kernel
 
 $$
-G_{s,L}(\ln\sigma) = \frac{1}{\sqrt{2\pi}\,\lambda}\,
-\exp\!\left(-\frac{(\ln\sigma+\lambda^{2})^{2}}{2\lambda^{2}}\right)
+G_{s,L}(\ln\sigma) = \frac{1}{\sqrt{2\pi}\lambda}
+\exp\left(-\frac{(\ln\sigma+\lambda^{2})^{2}}{2\lambda^{2}}\right)
 $$
 
 where $\lambda^{2}$ is the only free parameter.
@@ -57,7 +57,7 @@ where $\lambda^{2}$ is the only free parameter.
 We compare the empirical CDF $F_n$ ($n$ samples) of the standardized increments to the Gaussian and Castaing CDFs ($F$) via
 
 $$
-D_n = \sup_x \, |F_n(x) - F(x)|
+D_n = \sup_x  |F_n(x) - F(x)|
 $$
 
 Intuitively, the KS statistic is the maximum vertical gap between the two CDFs.
